@@ -2,12 +2,11 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller{
+class Login_controller extends CI_Controller{
 
 	//MARK: - SetUp
 	public function __construct(){
 		parent::__construct();
-		$this->load->model('Login_model');
 	}
 
 	public function index(){
@@ -22,18 +21,20 @@ class Login extends CI_Controller{
 
 		//Call the validator helper
 
+
 		//Call model method
-		$response = $this->login_model->try_login($email, $password);
+		$response = 'ok';
+		$view_to_load = 'registration';
 
 		if($response == 'ok'){
-			
+			$view_to_load = 'home_view';
 		}
 		else{
-			//throws
+			$view_to_load = '';
 		}
 
 		//Login condition
-        $this->load->view('registration');
+        $this->load->view($view_to_load);
 	}	
 
 }

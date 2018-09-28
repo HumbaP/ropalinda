@@ -1,19 +1,8 @@
 <?php
 
-class User extends CI_Model {
+class User_model extends CI_Model {
 
-        private $uuid;
-        private $password;
-        private $status;
-        private $name;
-        private $lastname;
-        private $street;
-        private $second_street;
-        private $street_number;
-        private $zip_code;
-        private $phone_number;
-        private $email;
-        private $country;
+        private $user;
 
         //Función de prueba
         public function get_user_by_uuid(){
@@ -34,4 +23,20 @@ class User extends CI_Model {
 
 
 
+
+/*
+
+Ejemplo con User
+// Controlador - User_controller
+// Modelo - User_model
+// Vistas - user_view, nav_view, profile_view
+// Variables - una_variable_con_under_score
+// Funciones - una_funcion()
+// POO - User (nombre con CamelCase)
+
+
+*/
+
 ?>
+
+
