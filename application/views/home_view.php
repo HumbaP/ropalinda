@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- User interaction -->
 <!-- VALIDA CON PHP SI TENEMOS SESIÓN - Y ASÍ SABER SI MOSTRAR LOS BOTONES O NO -->
-<form action="welcome/click" method="POST" >
+<form action="registration" method="POST" >
    <input type="submit" name="regButton" value="Registrarme" />
 </form>
 

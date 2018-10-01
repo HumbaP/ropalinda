@@ -74,12 +74,12 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
+	'dsn'	=> 'mysql:host=localhost; dbname=ropalinda; charset=utf8;', //default = vacío
 	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => '',
-	'database' => 'ropalinda',
-	'dbdriver' => 'mysqli',
+	//Se eliminó el key 'dbname'
+	'password' => '', 
+	'dbdriver' => 'pdo', //default = mysqli
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
