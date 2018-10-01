@@ -8,7 +8,11 @@ class User_controller extends CI_Controller {
 	public function index(){
 		$this->load->model('User_model');
 		$user = $this->User_model->get_users()[0];
-		echo $user->name;
+	}
+
+	public function login(){
+		$this->load->model('User_model');
+		$this->User_model->login("fernando@gmail.com","1234");
 	}
 
 	

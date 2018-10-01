@@ -1,11 +1,13 @@
 <?php
 
 require_once(APPPATH.'libraries/Session.php');
+require_once(APPPATH.'libraries/Security.php');
+require_once(APPPATH.'libraries/User.php');
 
 class User_model extends CI_Model {
 
 
-    //Esta función crea un usuario, en caso de éxito regresa 1, de lo contrario 0.
+    //Esta función crea un usuario, en caso de éxito regresa true, de lo contrario false.
     public function create($user){
         $user_to_array = (array) $user;
         $reg_statement = $this->db->conn_id->prepare("INSERT INTO user VALUES(:uuid, :name, :last_name, :street, :second_street, :street_number, :zip_code, :phone_number, :email, :password, :status, :country)");
@@ -19,8 +21,31 @@ class User_model extends CI_Model {
 
     }
 
+    //Regresa un usuario.
     public function login($email, $password){
-        
+        $data["email"] = $email;
+
+        $reg_statement = $this->db->conn_id->prepare("SELECT * FROM user WHERE email=:email");
+        $reg_statement->execute($data);
+
+        $results = $reg_statement->fetch(PDO::FETCH_ASSOC);
+        $hashed_password = $results["password"];
+
+        if(Security::verify_password($password, $hashed_password)){
+
+            $new_user = new stdClass();
+            foreach ($results as $key => $value){
+                $new_user->$key = $value;
+            }   
+            $new_user->password = "";//Hide password
+            $this->build_session($new_user);
+            $new_user->uuid = ""; //Hide the UUID
+            return $new_user;
+
+        }
+        else {
+            return null;
+        }
     }
 
     public function build_session($user){
@@ -28,6 +53,8 @@ class User_model extends CI_Model {
         $session_statement = $this->db->conn_id->prepare("INSERT INTO session VALUES(:uuid, :secret_key, :login_date)");
 
         $session_statement->execute($new_session->getDataAsArray());
+
+        //USE COOKIES TO SAVE SESSION
     }
 
     public function validate_session(){

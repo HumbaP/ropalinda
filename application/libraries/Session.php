@@ -1,5 +1,6 @@
 <?php
 
+require_once(APPPATH.'libraries/Security.php');
 date_default_timezone_set('America/Mazatlan');
 
 class Session{
@@ -9,7 +10,7 @@ class Session{
 	private $user;
 
 	function __construct($user){
-		$this->secret_key = $this->key_generator();
+		$this->secret_key = Security::key_generator();
 		$this->login_date = date("Y-m-d H:i:s");
 		$this->user = $user;
 	}
@@ -20,10 +21,6 @@ class Session{
 					  'login_date' => $this->login_date);
 		return $data;
 	}
-
-	private function key_generator(){
-        return password_hash(uniqid(), PASSWORD_DEFAULT);
-    }
 
 }
 	
