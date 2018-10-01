@@ -12,20 +12,26 @@ class User_model extends CI_Model {
         $reg_statement->execute($user_to_array);
 
         if($reg_statement->rowCount() == 1){
-            $new_session = new Session($user);
-            $session_statement = $this->db->conn_id->prepare("INSERT INTO session VALUES(:uuid, :secret_key,
-                :login_date)");
-
-            $session_statement->execute($new_session->getDataAsArray());
+            $this->build_session($user);
             return true;
         }
         return false;
 
     }
 
-
     public function login($email, $password){
-        //$statement = $this->db->conn_id->prepare("SELECT *")
+        
+    }
+
+    public function build_session($user){
+        $new_session = new Session($user);
+        $session_statement = $this->db->conn_id->prepare("INSERT INTO session VALUES(:uuid, :secret_key, :login_date)");
+
+        $session_statement->execute($new_session->getDataAsArray());
+    }
+
+    public function validate_session(){
+        
     }
 
 
