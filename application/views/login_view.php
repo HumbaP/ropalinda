@@ -13,8 +13,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div id="container">
 
 Esta es la pantalla de login
+<form action="try_login" method="POST">
+	<div class="col s12 m6">
+		<label for="email">Correo</label>
+		<input type="text" name="email" placeholder="Email">
+	</div>
+	<div class="col s12 m6">
+		<label for="contraseña">Contraseña</label>
+		<input type="password" name="password" placeholder="Contraseña">
+	</div>
+	<input class="btn right"type="submit" name="regButton" value="Registrarme" />
 
-<form action="try_login" method=""></form>
+</form>
 
 
 </div>

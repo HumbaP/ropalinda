@@ -28,12 +28,12 @@ class Registration_controller extends CI_Controller {
 		$data['email']= $this->input->post('email');
 		$data['password'] = $this->input->post('password');
 		$data['country'] = $this->input->post('country');
-
-		$new_user = new User(User::offline_data());
+		
+		$new_user =new User($data); //new User(User::offline_data());
 
 		$this->load->model('user_model');
 		$this->user_model->create($new_user);
-		
+		var_dump($new_user);
 	}
 
 }
