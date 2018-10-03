@@ -53,6 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['user/create/(:any)']='User_controller/register/$1';
 $route['registration']='Registration_controller';
 $route['login']='Login_controller';
+$route['try_login']='Login_controller/try_login';
 
 
 $route['default_controller'] = 'home_controller';

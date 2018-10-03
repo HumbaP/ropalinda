@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-
+	
     <?php include('templates/navbar_view.php')?>
 
 	<div class="row">
@@ -54,6 +54,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </form>
 <!-- ES UNA VISTA ^^ -->
 
+<?php if(isset($_SESSION['user'])){
+		echo "Ya has iniciado sesión perro";	
+	}
+	?>
 
 </div>
 

@@ -31,9 +31,10 @@ class Registration_controller extends CI_Controller {
 		
 		$new_user =new User($data); //new User(User::offline_data());
 
+		$_SESSION['user']=$new_user;
 		$this->load->model('user_model');
-		$this->user_model->create($new_user);
-		var_dump($new_user);
+		$some= $this->user_model->create($new_user);
+		var_dump($some);
 	}
 
 }

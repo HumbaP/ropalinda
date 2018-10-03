@@ -16,26 +16,23 @@ class Login_controller extends CI_Controller{
 
 	//MARK: - Actions
 	public function try_login(){ 
-		$email = $this->input->post('regButton'); 
-		$password = $this->input->post('regButton');
-
+		$email = $this->input->post('email'); 
+		$password = $this->input->post('password');
+		$this->load->model('User_model');
 		//Call the validator helper
 
-
+		$user= $this->User_model->login($email,$password);
 		//Call model method
-		$response = 'ok';
 		$view_to_load = 'registration';
-
-		if($response == 'ok'){
-			$view_to_load = 'home_view';
+		if($user!=null){
+			$view_to_load = 'home_';
+			$_SESSION['user']=$useviewr;
 		}
-		else{
-			$view_to_load = '';
-		}
-
+		//$_SESSION['session']=;
 		//Login condition
         $this->load->view($view_to_load);
 	}	
+
 
 }
 	
