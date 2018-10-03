@@ -10,6 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -42,22 +43,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<img class="responsive-img" src="cool_pic.jpg">
 		</div>
 	</div>
-	
-<!-- User interaction -->
-<!-- VALIDA CON PHP SI TENEMOS SESIÓN - Y ASÍ SABER SI MOSTRAR LOS BOTONES O NO -->
-<form action="registration" method="POST" >
-   <input type="submit" name="regButton" value="Registrarme" />
-</form>
-
-<form action="login" method="POST">
-	<input type="submit" name="logButton" value="Iniciar sesión" />
-</form>
-<!-- ES UNA VISTA ^^ -->
-
-<?php if(isset($_SESSION['user'])){
-		echo "Ya has iniciado sesión perro";	
-	}
-	?>
 
 </div>
 

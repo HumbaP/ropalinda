@@ -54,7 +54,7 @@ $route['user/create/(:any)']='User_controller/register/$1';
 $route['registration']='Registration_controller';
 $route['login']='Login_controller';
 $route['try_login']='Login_controller/try_login';
-
+$route['logout']='Login_controller/logout';
 
 $route['default_controller'] = 'home_controller';
 $route['404_override'] = '';

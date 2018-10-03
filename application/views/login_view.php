@@ -10,6 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -27,10 +28,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 <?php include('templates/navbar_view.php');?>
-<?php session_start();
-	echo isset($_SESSION['user']);
-	echo "<br>";
-?>
 <div class="row">
 	<div class="col s12 m7">
 	<h3>Soy nuevo aquí</h3>
@@ -60,6 +57,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 </div>
+<script>
+
+</script>
 
 </body>
 </html>

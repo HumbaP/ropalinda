@@ -9,6 +9,7 @@
 		  src="https://code.jquery.com/jquery-3.3.1.slim.js"
 		  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
 		  crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<title>Registro</title>
 </head>
@@ -33,39 +34,39 @@
 	</div>
 	<div class="col s12 m6">
 		<label for="lastname">Apellidos</label>
-		<input type="text" name="lastname" placeholder="Apellido">
+		<input type="text" required name="lastname" placeholder="Apellido">
 	</div>
 	<div class="col s12 m6">
 		<label for="email">Correo</label>
-		<input type="text" name="email" placeholder="Email">
+		<input type="text"  required name="email" placeholder="Email">
 	</div>
 	<div class="col s12 m6">
 		<label for="contraseña">Contraseña</label>
-		<input type="password" name="password" placeholder="Contraseña">
+		<input type="password" required name="password" placeholder="Contraseña">
 	</div>
 	<div class="col s12 m10">
 		<label for="street">Calle</label>
-		<input type="text" name="street" placeholder="Calle">
+		<input type="text" name="street" required placeholder="Calle">
 	</div>
 	<div class="col s12 m2">
 		<label for="street_number">Numero</label>
-		<input type="text" name="street_number" placeholder="Numero">
+		<input type="text" name="street_number" required placeholder="Numero">
 	</div>
 	<div class="col s12 m12">
 		<label for="second_street">Colonia</label>
-		<input type="text" name="second_street" placeholder="Colonia">
+		<input type="text" name="second_street" required placeholder="Colonia">
 	</div>
 	<div class="col s12 m3">
 		<label for="zip_code">CP</label>
-		<input type="text" name="zip_code" placeholder="CP">
+		<input type="text" name="zip_code" required placeholder="CP">
 	</div>
 	<div class="col s12 m3">
 		<label for="country">País</label>
-		<input type="text" name="country" placeholder="País	">
+		<input type="text" name="country" required placeholder="País	">
 	</div>
 	<div class="col s12 m12">
 		<label for="phone_number">Telefono</label>
-		<input type="text" name="phone_number" placeholder="Telefono">
+		<input type="text" name="phone_number" required placeholder="Telefono">
 	</div>
 
 	
