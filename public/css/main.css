@@ -1,4 +1,29 @@
-html{
-    background-color: #33333D;
-    color: white;
+
+@font-face {
+    font-family: ropalinda-main;
+    src: url(../fonts/K2D/K2D-Regular.ttf);
+}
+
+body{
+	background-color: #fff;
+}
+
+html,body,buttons,input,textarea {
+    font-family: ropalinda-main;
+}
+
+
+.action-button{
+	margin-top: 25px;
+	height: 80px;
+	width: 240px;
+	color: black;
+	border-style: none;
+	background-color: #e3e3e3;
+	font-size: 24px;
+}
+
+.action-button:hover{
+	background-color: #b3b3b3; 
+	cursor: pointer;
 }

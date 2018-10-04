@@ -21,7 +21,7 @@ class User_model extends CI_Model {
 
     }
 
-    //Regresa un usuario.
+    //Regresa true si la combinación email password es correcta.
     public function login($email, $password){
         $data["email"] = $email;
 
@@ -40,7 +40,10 @@ class User_model extends CI_Model {
             $new_user->password = "";//Hide password
             $this->build_session($new_user);
             $new_user->uuid = ""; //Hide the UUID
-            return $new_user;
+
+            //USE COOKIES TO SAVE THE USER DATA
+
+            return true;
 
         }
         else {
@@ -48,7 +51,7 @@ class User_model extends CI_Model {
         }
     }
 
-    public function build_session($user){
+    private function build_session($user){
         $new_session = new Session($user);
         $session_statement = $this->db->conn_id->prepare("INSERT INTO session VALUES(:uuid, :secret_key, :login_date)");
 

@@ -13,7 +13,7 @@ class Home_controller extends CI_Controller {
 	// Método default
 	public function index(){
 		//Esos datos los mostramos en la vista
-		$this->load->view('home_view');
+		$this->load->view('index');
 	}
 
 	

@@ -1,0 +1,85 @@
+
+
+.login_form_wrapper {
+  width: 550px;
+  height: 110px;
+  margin: 100px auto;
+}
+
+.login_form_wrapper #button_wrapper{
+  text-align: center;
+}
+
+.group {
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: 36.66667px;
+  color: black;
+  font: 400 36.66667px ropalinda-main;
+  cursor: text;
+  transition: .25s ease;
+}
+
+input[type=text], input[type=password] {
+  display: block;
+  width: 100%;
+  padding-top: 36.66667px;
+  border: none;
+  border-radius: 0;
+  color: black;
+  font-size: 36.66667px;
+  transition: .3s ease;
+}
+
+input:valid ~ label {
+  top: 0;
+  font: 700 22px ropalinda-main;
+  color: black;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus ~ label {
+  top: 0;
+  font: 700 22px ropalinda-main;
+  color: black;
+}
+
+input:focus ~ .bar:before {
+  transform: translateX(0);
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(30,10,50,0.5) inset;
+  -webkit-text-fill-color: white !important;
+}
+
+.bar {
+  background: black;
+  content: '';
+  width: 550px;
+  height: 3.66667px;
+  transition: .3s ease;
+  position: relative;
+}
+
+.bar:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: black;
+  transform: translateX(-100%);
+}
+
+::selection {
+  background: rgba(33, 150, 243, 0.3);
+}
