@@ -24,13 +24,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- Top Navigation Bar -->
 <?php
-	
 	include "top_nav_bar.php";
 
 ?>
 
 <div class="login_form_wrapper">
-	<form action="#" method="POST">
+	<form action="try_login" method="POST">
 	  <div class="group">
 	    <input type="text" name="email" id="email" required="required"/>
 	    <label for="email">Correo electrónico</label>

@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 
 <div class="reg_form_wrapper">
-	<form action="#" method="POST">
+	<form action="register" method="POST">
 
 
 		<h3>Información personal</h3>

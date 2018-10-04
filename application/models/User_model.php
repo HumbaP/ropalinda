@@ -15,6 +15,11 @@ class User_model extends CI_Model {
 
         if($reg_statement->rowCount() == 1){
             $this->build_session($user);
+            session_start();
+            $user->password = "";//Hide password
+            $user->uuid = ""; //Hide the UUID
+            $_SESSION['user']=$user;
+            session_write_close();
             return true;
         }
         return false;
@@ -42,7 +47,9 @@ class User_model extends CI_Model {
             $new_user->uuid = ""; //Hide the UUID
 
             //USE COOKIES TO SAVE THE USER DATA
-
+            session_start();
+            $_SESSION['user']=$new_user;
+            session_write_close();
             return true;
 
         }
@@ -58,6 +65,9 @@ class User_model extends CI_Model {
         $session_statement->execute($new_session->getDataAsArray());
 
         //USE COOKIES TO SAVE SESSION
+        session_start();
+        $_SESSION['key']=$new_session->getDataAsArray();
+        session_write_close();
     }
 
     public function validate_session(){

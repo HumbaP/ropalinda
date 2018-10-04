@@ -25,7 +25,6 @@ class Registration_controller extends CI_Controller {
 
 	//MARK: - Actions
 	public function register(){
-		session_start();
 		$data['name']= $this->input->post('name');
 		$data['last_name']= $this->input->post('lastname');
 		$data['street']= $this->input->post('street');
@@ -38,10 +37,12 @@ class Registration_controller extends CI_Controller {
 		$data['country'] = $this->input->post('country');
 		
 		$new_user =new User($data); //new User(User::offline_data());
-		$_SESSION['user']=$new_user;
 		$this->load->model('user_model');
-		$some= $this->user_model->create($new_user);
-		session_write_close();
+		$user_created= $this->user_model->create($new_user);
+		if($user_created){
+			
+		}
+		//Validation
 		redirect('/');
 	}
 

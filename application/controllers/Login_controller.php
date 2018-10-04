@@ -28,24 +28,22 @@ class Login_controller extends CI_Controller{
 			session_write_close();
 			redirect('/');
 		}
+		session_write_close();
 		$email = $this->input->post('email'); 
 		$password = $this->input->post('password');
 		$this->load->model('User_model');
 		//Call the validator helper
-		$user= $this->User_model->login($email,$password);
+		$loged_in= $this->User_model->login($email,$password);
 		//Call model method
-		$view_to_load = 'registration_view';
-		if($user!=null){
-			$_SESSION['user']=$user;
+		if($loged_in){
 			redirect('/');
 		}
-		//$_SESSION['session']=;
-		//Login condition
-		session_write_close();
-        $this->load->view($view_to_load);
+		$this->load->view('registration_view');
+		
 	}	
 
 	public function logout(){
+		//Change this to model & change session table
 		session_start();
 		session_destroy();
 		redirect('/');
