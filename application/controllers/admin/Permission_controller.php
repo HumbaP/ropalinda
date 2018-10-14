@@ -18,7 +18,6 @@ class Permission_controller extends CI_Controller{
 
     public function create(){
         $input = $this->input;
-
         $new_admin = $this->admin->create_admin($input);
 
     }

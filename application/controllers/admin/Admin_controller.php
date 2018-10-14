@@ -5,18 +5,15 @@ class Admin_controller extends CI_Controller{
     public function __construct(){
         parent::__construct();
         $this->load->model('admin/Admin_model','admin');
-
     }
 
-    public function index(){
-      
+    public function index(){    
+        $this->load->view('admin_registration_home_view');
     }
 
     public function create(){
         $input = $this->input;
-
         $new_admin = $this->admin->create_admin($input);
-
     }
 
     public function update(){
@@ -27,8 +24,8 @@ class Admin_controller extends CI_Controller{
 
     }
     
-    public function list(){
-        $admin_list= $this->admin->get_admins();
+    public function admin_list(){
+        $admin_list = $this->admin->get_admins();
         echo json_encode($admin_list);
     }
 

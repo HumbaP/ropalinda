@@ -6,7 +6,7 @@
 </div>
 
 <div class="reg_form_wrapper">
-	<form action="register" method="POST">
+	<form action="admin/user/create" method="POST">
 		<h3>Información general</h3>
 		<div class="group">
 			<input type="text" name="name" id="name" required="required"/>
@@ -33,10 +33,10 @@
 
 		<p class="normal_text">Rol</p>
 		
-		<select class="ropalinda_selector">
-			<option value="super_admin">Súper admin</option>
-			<option value="designer">Diseñador</option>
-			<option value="admin_clients">Admin. clientes</option>
+		<select name="role_id" class="ropalinda_selector">
+			<option value="1">Súper admin</option>
+			<option value="2">Diseñador</option>
+			<option value="3">Admin. clientes</option>
 		</select>
 	
 

@@ -12,7 +12,6 @@ class Admin_model extends CI_Model{
         $this->generalFabric = new GeneralFabric();
     }
 
-
     public function login($input){
         $email=$input->post('email');
         $password=$input->post('password');
@@ -31,8 +30,8 @@ class Admin_model extends CI_Model{
         $role_id = $input->post('role_id');
         $password = $input->post('password');
         $new_admin = Admin::CreateNewAdmin($name,$lastname,$email,$password);
+
         $this->generalFabric->create_admin($new_admin,$role_id);
-        var_dump($new_admin);
     }
 
     public function get_admins(){

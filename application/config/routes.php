@@ -61,6 +61,7 @@ $route['admin/user/create']='admin/Admin_controller/create';
 $route['admin/user/delete']='admin/Admin_controller/delete';
 $route['admin/user/update']='admin/Admin_controller/update';
 $route['admin/user/login']='admin/Admin_controller/login';
+$route['admin']='admin/Admin_controller';
 
 $route['register']='Registration_controller/register';
 $route['registration']='Registration_controller';
