@@ -35,15 +35,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div id="reg-info">
 	
-	<h1>Solicita acceso a nuestra plataforma</h1>
+	<h1>Solicita tu membresía</h1>
 	<p>Completa los campos y haz clic en Solicitar membresía. <br> En caso de ser aceptado, recibirás un correo de bienvenida de Ropa Linda en tu bandeja de entrada.</p>
 
 </div>
 
 <div class="reg_form_wrapper">
 	<form action="register" method="POST">
-
-
 		<h3>Información personal</h3>
 		<div class="group">
 			<input type="text" name="name" id="name" required="required"/>
@@ -64,45 +62,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="bar"></div>
 		</div>
 
-		<div class="group">
-			<input type="password" name="password" id="password" required="required"/>
-			<label for="password">Contraseña</label>
-			<div class="bar"></div>
-		</div>
-
 		<h3>Información de contacto</h3>
+
+		<p class="normal_text">País</p>
+		
+		<select class="ropalinda_selector">
+			<option value="RFC">México</option>
+			<option value="CUIT">Argentina</option>
+			<option value="NIT">Chile</option>
+			<option value="SIN">Colombia</option>
+			<option value="TIN/SSN">Canadá</option>
+			<option value="DNI">Estados Unidos</option>
+			<option value="VAT">España</option>
+		</select>
+	
 		<div class="group">
-			<input type="text" name="street" id="street" required="required"/>
-			<label for="street">Calle</label>
+			<input type="text" name="identifier" id="identifier" required="required"/>
+			<label id="identifier-label" for="identifier">RFC</label>
 			<div class="bar"></div>
 		</div>
 
 		<div class="group">
-			<input type="text" name="second_street" id="second_street" required="required"/>
-			<label for="second_street">Colonia</label>
-			<div class="bar"></div>
-		</div>
-
-		<div class="group">
-			<input type="text" name="street_number" id="street_number" required="required"/>
-			<label for="street_number">Número exterior</label>
-			<div class="bar"></div>
-		</div>
-
-		<div class="group">
-			<input type="text" name="zip_code" id="zip_code" required="required"/>
-			<label for="zip_code">Código postal</label>
-			<div class="bar"></div>
-		</div>
-
-		<div class="group">
-			<input type="text" name="country" id="country" required="required"/>
-			<label for="country">País</label>
-			<div class="bar"></div>
-		</div>
-
-		<div class="group">
-			<input type="number" name="phone_number" id="phone_number" required="required"/>
+			<input type="text" name="phone_number" id="phone_number" required="required"/>
 			<label for="phone_number">Número teléfonico</label>
 			<div class="bar"></div>
 		</div>
@@ -114,6 +95,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</form>
 </div>
 
-
+<script type="text/javascript" src="<?php echo base_url('public/')?>js/registration.js"></script>
 </body>
 </html>

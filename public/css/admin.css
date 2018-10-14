@@ -1,0 +1,54 @@
+@font-face {
+    font-family: ropalinda-main;
+    src: url(../fonts/K2D/K2D-Regular.ttf);
+}
+
+body{
+	background-color: #fff;
+}
+
+html,body,buttons,input,textarea {
+    font-family: ropalinda-main;
+}
+
+.admin_title{
+	font-size: 1.4em;
+}
+
+.admin_subtitle{
+	font-size: 1.1em;
+}
+
+.admin_paragraph{
+	font-size: 1em;
+}
+
+.admin_input{
+	border: none;
+	background-color: #e3e3e3;
+	color: black;
+	height: 40px;
+	font-size: 1.3em;
+	margin-bottom: 10px;
+	display: block;
+	width: 100%;
+}
+
+.admin_button{
+	font-size: 1.2em;
+	background-color: #000;
+	color: white;
+	height: 40px;
+	border:none;
+}
+
+#login_wrapper{
+	display: block;
+	margin: 0 auto;
+	width: 60%;
+	text-align: center;
+}
+
+#form_id{
+	display: inline-block;
+}

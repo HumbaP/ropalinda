@@ -1,4 +1,15 @@
 
+.normal_text{
+  font-size: 1.1em;
+}
+
+.ropalinda_selector{
+  border: none;
+  background-color: #e3e3e3;
+  height: 40px;
+  font-size: 1.2em;
+  width: 100%;
+}
 
 .reg_form_wrapper {
   width: 300px;

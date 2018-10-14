@@ -2,13 +2,7 @@
 <div class="topnav" id="myTopnav">
 
   <!-- Logo -->
-  <a class="logo" href="<?php echo base_url();?>">Ropa Linda</a>
-
-
-  <!-- Búscador -->
-  <a class="left search_wrapper">
-    <input class="ropalinda_search" placeholder="Buscar" type="search" name="search_bar"/>
-  </a>
+  <a class="logo" href="<?php echo base_url();?>">Ropa Linda-Admin</a>
 
 
   <!-- Reg-Login / Perfil-Logout-->

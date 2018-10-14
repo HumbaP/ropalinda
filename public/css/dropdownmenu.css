@@ -59,3 +59,8 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.design_clothe{
+    background-color: #7c911d;
+    margin-left: 40px;
+}
