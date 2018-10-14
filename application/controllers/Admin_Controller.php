@@ -13,7 +13,7 @@ class Admin_Controller extends CI_Controller {
 	// Método default
 	public function index(){
 		//Esos datos los mostramos en la vista
-		$this->load->view('admin_clients_home_view');
+		$this->load->view('admin_registration_home_view');
 	}
 
 	

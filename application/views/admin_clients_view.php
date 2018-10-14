@@ -1,5 +1,4 @@
 
-
 <div id="clients_wrapper">
 
 	<div id="panel_info">
