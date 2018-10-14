@@ -3,9 +3,18 @@
     src: url(../fonts/Charmonman/Charmonman-Bold.ttf);
 }
 
+@font-face {
+    font-family: ropalinda-main;
+    src: url(../fonts/K2D/K2D-Regular.ttf);
+}
+
+
+html,body,buttons,input,textarea {
+    font-family: ropalinda-main;
+}
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #000;
+    background-color: #263759;
     overflow: hidden;
 }
 

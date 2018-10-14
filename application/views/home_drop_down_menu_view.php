@@ -1,38 +1,45 @@
 <div class="navbar">
 
-  <a href="#home">Inicio</a>
-
-  <a href="#home">Top Trending</a>
-
-  <a href="#home">Lo más nuevo</a>
-
   <div class="dropdown">
-    <button class="dropbtn">Dama 
+    <button class="dropbtn">Departamentos 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Blusas</a>
-      <a href="#">Manga larga informal</a>
-      <a href="#">Camisa formal</a>
-      <a href="#">Suéter</a>
-      <a href="#">Ropa deportiva</a>
-      <a href="#">Interior</a>
-      <a href="#">Ver todo</a>
+      <a href="#">Dama</a>
+      <a href="#">Caballero</a>
+      <a href="#">Juvenil femenino</a>
+      <a href="#">Juvenil masculino</a>
+      <a href="#">Niñas</a>
+      <a href="#">Niños</a>
     </div>
   </div> 
 
   <div class="dropdown">
-    <button class="dropbtn">Caballero 
+    <button class="dropbtn">Temporadas 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Playera informal</a>
-      <a href="#">Manga larga</a>
-      <a href="#">Chalecos</a>
-      <a href="#">Interior</a>
-      <a href="#">Ropa deportiva</a>
-      <a href="#">Ver todo</a>
+      <a href="#">Otoño 2018</a>
+      <a href="#">Verano 2018</a>
+      <a href="#">Primavera 2018</a>
+      <a href="#">Invierno 2017</a>
     </div>
   </div> 
+
+  <a href="#home">Lo más vendido</a>
+
+  <a href="#home">¿Cómo funciona?</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">Empresa 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Acerca de</a>
+      <a href="#">Contáctanos</a>
+    </div>
+  </div> 
+
+  <a class="design_clothe" href="#home">Diseña tu prenda</a>
 
 </div>

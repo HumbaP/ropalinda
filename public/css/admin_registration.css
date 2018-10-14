@@ -1,0 +1,22 @@
+
+#reg-info{
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 50px;
+}
+
+#reg-info p{
+	font-size: 1.2em;
+}
+
+#button_wrapper {
+	margin-bottom: 300px;
+}
+
+.reg_form_wrapper h3{
+	background-color: #455068;
+	padding-left: 10px;
+	width: 290px;
+	height: 30px;
+	color: white;
+}

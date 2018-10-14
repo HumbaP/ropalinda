@@ -37,7 +37,7 @@ class Registration_controller extends CI_Controller {
 		$data['country'] = $this->input->post('country');
 
 		
-		$new_user =new User($data); //new User(User::offline_data());
+		$new_user = new User($data); //new User(User::offline_data());
 		$this->load->model('user_model');
 		//$input = $this->input;
 		//$this->user_model->try($input);
