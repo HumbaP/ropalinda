@@ -74,7 +74,7 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> 'mysql:host=localhost; dbname=ropalinda; charset=utf8;', //default = vacío
+	'dsn'	=> 'mysql:host=localhost; dbname=ropalinda2; charset=utf8;', //default = vacío
 	'hostname' => 'localhost',
 	'username' => 'root',
 	//Se eliminó el key 'dbname'

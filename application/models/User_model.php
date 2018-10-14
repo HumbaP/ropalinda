@@ -1,11 +1,18 @@
 <?php
 
-require_once(APPPATH.'libraries/Session.php');
+require_once(APPPATH.'objects/Session.php');
 require_once(APPPATH.'libraries/Security.php');
-require_once(APPPATH.'libraries/User.php');
+require_once(APPPATH.'objects/User.php');
+require_once(APPPATH.'fabric/GeneralFabric.php');
 
 class User_model extends CI_Model {
 
+    public $generalFabric;
+
+    public function __construct(){
+        parent::__construct();
+        $this->generalFabric = new GeneralFabric();
+    }
 
     //Esta función crea un usuario, en caso de éxito regresa true, de lo contrario false.
     public function create($user){
@@ -59,11 +66,7 @@ class User_model extends CI_Model {
     }
 
     private function build_session($user){
-        $new_session = new Session($user);
-        $session_statement = $this->db->conn_id->prepare("INSERT INTO session VALUES(:uuid, :secret_key, :login_date)");
-
-        $session_statement->execute($new_session->getDataAsArray());
-
+        $new_session = $this->generalFabric->create_session($user);
         //USE COOKIES TO SAVE SESSION
         session_start();
         $_SESSION['key']=$new_session->getDataAsArray();
@@ -74,6 +77,9 @@ class User_model extends CI_Model {
         
     }
 
+    public function try($input){
+        var_dump($input->post('name'));
+    }
 
 }   
 

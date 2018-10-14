@@ -8,7 +8,7 @@
   
   <a class="right" href="<?php echo base_url('login');?>">Iniciar sesión</a>
   <a class="right" href="<?php echo base_url('registration');?>">Registrarme</a>
-  <?endif;?>
+  <?php endif; ?>
   <a href="menu" class="icon" onclick="open_topnav_menu()">
     <i class="fa fa-bars"></i>
   </a>

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-require_once(APPPATH.'libraries/User.php');
+require_once(APPPATH.'objects/User.php');
 
 class User_controller extends CI_Controller {
 	

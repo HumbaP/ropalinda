@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-require_once(APPPATH.'libraries/User.php');
+require_once(APPPATH.'objects/User.php');
 
 class Registration_controller extends CI_Controller {
 
@@ -35,9 +35,13 @@ class Registration_controller extends CI_Controller {
 		$data['email']= $this->input->post('email');
 		$data['password'] = $this->input->post('password');
 		$data['country'] = $this->input->post('country');
+
 		
 		$new_user =new User($data); //new User(User::offline_data());
 		$this->load->model('user_model');
+		//$input = $this->input;
+		//$this->user_model->try($input);
+		
 		$user_created= $this->user_model->create($new_user);
 		if($user_created){
 			

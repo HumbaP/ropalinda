@@ -50,6 +50,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+//Permission routes
+$route['permissions']='admin/Permission_controller';
+$route['permissions/create']='admin/Permission_controller/create';
+$route['permissions/delete']='admin/Permission_controller/delete';
+$route['permissions/update']='admin/Permission_controller/update';
+
+$route['admin/user/list']='admin/Admin_controller/list';
+$route['admin/user/create']='admin/Admin_controller/create';
+$route['admin/user/delete']='admin/Admin_controller/delete';
+$route['admin/user/update']='admin/Admin_controller/update';
+$route['admin/user/login']='admin/Admin_controller/login';
+
 $route['register']='Registration_controller/register';
 $route['registration']='Registration_controller';
 $route['login']='Login_controller';
