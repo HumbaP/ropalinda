@@ -8,12 +8,13 @@ class Admin_controller extends CI_Controller{
     }
 
     public function index(){    
-        $this->load->view('admin_registration_home_view');
+        $this->load->view('admin_designer_home_view');
     }
 
     public function create(){
         $input = $this->input;
         $new_admin = $this->admin->create_admin($input);
+        
     }
 
     public function update(){
