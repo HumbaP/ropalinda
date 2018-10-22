@@ -8,7 +8,7 @@ class Admin_controller extends CI_Controller{
     }
 
     public function index(){    
-        $this->load->view('admin_designer_home_view');
+        $this->load->view('admin_design_create');
     }
 
     public function create(){
