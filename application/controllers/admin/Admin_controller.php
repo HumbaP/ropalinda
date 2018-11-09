@@ -8,13 +8,12 @@ class Admin_controller extends CI_Controller{
     }
 
     public function index(){    
-        $this->load->view('admin_design_create');
+        $this->load->view('admin/admin_designer_create_clothe');
     }
 
     public function create(){
         $input = $this->input;
         $new_admin = $this->admin->create_admin($input);
-        
     }
 
     public function update(){

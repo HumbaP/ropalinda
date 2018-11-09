@@ -8,7 +8,6 @@
 
 	<div id="client_general">
 
-
 		<div id="filter_wrapper">
 			<span>Estado</span>
 			<select>
@@ -29,7 +28,6 @@
 			</select>
 			<input type="button" name="filter" value="Aplicar">
 		</div>
-
 
 		<div id="table_wrapper">
 			<table>
