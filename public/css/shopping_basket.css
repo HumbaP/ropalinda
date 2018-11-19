@@ -1,0 +1,129 @@
+h1{
+	margin-left: 40px;
+}
+
+#container {
+	margin: 20px 40px;
+}
+
+#total-container{
+	margin: 20px 40px 100px 20px;
+	text-align: right;
+}
+
+#total-wrapper{
+	margin-right: 200px;
+}
+
+#button-wrapper{
+	text-align: right;
+	margin-right: 200px;
+
+}
+
+#done-button{
+	background-color: blue;
+	color: white;
+	border:none;
+	height: 50px;
+	width: 120px;
+	font-size: 1.3em;
+	margin-top: 50px;
+}
+
+#button-wrapper-top{
+	text-align: right;
+	margin-right: 200px;
+}
+
+#done-button-top{
+	background-color: blue;
+	color: white;
+	border:none;
+	height: 50px;
+	width: 120px;
+	font-size: 1.3em;
+	margin-top: 10px;
+}
+
+.hr{
+	background-color: rgba(200,200,200,0.3);
+	height: 2px;
+	margin-top: 3px;
+	margin-bottom: 15px;
+}
+
+
+.product {
+
+}
+
+.product-img{
+	width: 10%;
+}
+
+.product-img img{
+	width: 100%;
+}
+
+.product-inf {
+	vertical-align: top;
+	width: 40%;
+}
+
+.product-inf span{
+	display: block;
+}
+
+.product-title{
+	font-size: 2em;
+	margin-left: 20px;
+}
+
+.product-desc{
+	font-size: 1.2em;
+	color: gray;
+	margin-left: 20px;
+}
+
+.product-delete{
+	font-size: 1em;
+	color: blue;
+	margin-top: 50px;
+	margin-left: 20px;
+}
+
+.product-counter{
+	width: 20%;
+	vertical-align: top;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.product-counter select{
+	border:none;
+	width: 120px;
+	height: 50px;
+	font-size: .8em;
+	background-color: #e3e3e3;
+}
+
+.product-price{
+	width: 25%;
+	vertical-align: top;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.subtotal{
+	font-size: 1.5em;
+	margin-bottom: -20px;
+}
+
+.total {
+	font-size: 2.2em;
+}
+
+.line {
+	display: inline-block;
+}
