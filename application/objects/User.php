@@ -3,7 +3,7 @@
 require_once(APPPATH.'libraries/Security.php');
 
 class User{
-
+    //To do
 	public $uuid;
     public $name;
     public $last_name;

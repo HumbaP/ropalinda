@@ -10,13 +10,12 @@ class Login_controller extends CI_Controller{
 	}
 
 	public function index(){
-		session_start();
 		if(isset($_SESSION['user'])){
 			session_write_close();
 			redirect('/');
 		}else{
 			session_write_close();
-			$this->load->view('login_view');
+			$this->load->view('public/login_view');
 		}
 	}
 
@@ -38,7 +37,7 @@ class Login_controller extends CI_Controller{
 		if($loged_in){
 			redirect('/');
 		}
-		$this->load->view('registration_view');
+		$this->load->view('public/registration_view');
 		
 	}	
 
