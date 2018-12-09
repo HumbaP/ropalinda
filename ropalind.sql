@@ -81,9 +81,8 @@ create table design(
     cloth_id int,
     thumbnail varchar(256),
     price float not null,
-    constraint FK_Cloth_Design foreign key (cloth_id) references clothing(cloth_id),
     constraint FK_Client_Design foreign key (client_id) references client(client_id),
-    constraint FK_Component_Design foreign key (component_id) references component(component_id),
+    constraint FK_Component_Design foreign key (cloth_id, component_id) references component(cloth_id, component_id),
     constraint PK_Design primary key (client_id, cloth_id, component_id)
 );
 
@@ -105,7 +104,8 @@ create table address(
 create table folio(
     folio int auto_increment primary key
 ); 
-alter table folio AUTO_INCREMENT = 20000
+
+alter table folio AUTO_INCREMENT = 20000;
 
 create table purchase(
     folio int,
@@ -113,8 +113,8 @@ create table purchase(
     real_ship_date date,
     estimated_ship_date date,
     total double,
-    constraint FK_Client_Address foreign key (client_id) references client(client_id),
-    constraint FK_Folio foreign key (folio) references folio(folio)
+    constraint FK_Client_Purchase foreign key (client_id) references client(client_id),
+    constraint FK_Folio foreign key (folio) references folio(folio),
     constraint PK_Purchase primary key (folio, client_id)
 );
 
@@ -144,7 +144,7 @@ create table role(
 create table admin_role(
     admin_id int,
     role_id int,
-    constraint FK_Admin_role foreign key (admin_role) references admin(admin_id),
+    constraint FK_Admin_role foreign key (admin_id) references admin_user(admin_id),
     constraint FK_Role_admin foreign key (role_id) references role(role_id)
 );
 
